@@ -59,14 +59,22 @@ print(f"Ср. кв. ошибка при полиноме = 4  составляе
 print(f"Ср. кв. ошибка при полиноме = 5  составляет : {sq_error(x, y, f5)}")
 
 # Отображение функций при разных значениях полиномы
+
 x1 = list(range(744, 751))
+
 func1 = np.poly1d(np.polyfit(numpy_x, numpy_y, 1))
 plt.plot(x1, func1(x1))
+
 func2 = np.poly1d(np.polyfit(numpy_x, numpy_y, 2))
 plt.plot(x1, func2(x1))
+
 func3 = np.poly1d(np.polyfit(numpy_x, numpy_y, 3))
 plt.plot(x1, func3(x1))
+
 func4 = np.poly1d(np.polyfit(numpy_x, numpy_y, 4))
 plt.plot(x1, func4(x1))
+
 func5 = np.poly1d(np.polyfit(numpy_x, numpy_y, 5))
 plt.plot(x1, func5(x1))
+
+plt.show()
